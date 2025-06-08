@@ -9,11 +9,9 @@
     <strong><sup>3</sup>Affiliated Hospital of Qinghai University, Xining, China</strong><br>
   <a href="https://chenjiayan-qhu.github.io/EAGLE/">Paper</a> | <a href="https://chenjiayan-qhu.github.io/EAGLE/">Demo</a>
 
-<img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/chenjiayan-qhu/EAGLE&right_color=red" />
-
-![visitors](https://visitor-badge.glitch.me/badge?page_id=chenjiayan-qhu&left_color=green&right_color=red)
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=chenjiayan-qhu.EAGLE)
-
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=chenjiayan-qhu.EAGLE" alt="visitors">
+</p>
 
 
 # EAGLE: An Efficient Global Attention Lesion Segmentation Model for Hepatic Echinococcosis
