@@ -12,6 +12,7 @@
 <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/chenjiayan-qhu/EAGLE&right_color=red" />
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=chenjiayan-qhu&left_color=green&right_color=red)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=chenjiayan-qhu.EAGLE)
 
 
 
