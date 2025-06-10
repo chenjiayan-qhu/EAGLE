@@ -3,13 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>EAGLE</title>
-    <meta property="og:title" content="EAGLE">
+    <title>ELGMamba</title>
+    <meta property="og:title" content="ELGMamba">
     <meta property="og:description"
-        content="EAGLE: An Efficient Global Attention Lesion Segmentation Model for Hepatic Echinococcosis">
+        content="ELGMamba: An Efficient Mamba-Based UNet for Local and Global Feature Modeling in Hepatic Echinococcosis Lesion Segmentation">
     <link rel="stylesheet" href="./files/style.css">
     <link rel="stylesheet" href="./files/css">
-    <link rel="icon" href="./files/EAGLE_LOGO1_.png">
+    <link rel="icon" href="./files/ELGMamba_LOGO1_.png">
     <link rel="stylesheet" href="./files/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -1967,8 +1967,8 @@
 <body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed="">
     <div class="header" id="top">
         <h1>
-            <img src="files/EAGLE_LOGO1_.png" alt="logo" style="width: 10%"><br>
-            <span style="font-weight: bolder;">EAGLE: An Efficient Global Attention<br>  Lesion Segmentation Model for Hepatic Echinococcosis </span>
+            <img src="files/logo.png" alt="logo" style="width: 10%"><br>
+            <span style="font-weight: bolder;">ELGMamba: An Efficient Mamba-Based UNet for Local and Global Feature Modeling<br> in Hepatic Echinococcosis Lesion Segmentation </span>
         </h1>
 
         <table class="authors">
@@ -1980,7 +1980,6 @@
                                 <a href="https://chenjiayan-qhu.github.io/" target="_blank" style="color: #0b0b0b">Jiayan Chen</a>,
                                 <a href="https://cslikai.cn/" target="_blank" style="color: #0b0b0b">Kai Li</a>,
                                 <a href="#" target="_blank" style="color: #0b0b0b">Yulu Zhao</a>,
-                                <a href="#" target="_blank" style="color: #0b0b0b">Zhanjin Wang</a>,
                                 <a href="#" target="_blank" style="color: #0b0b0b">Zhan Wang</a>
                             </span>
                         </h5>
@@ -1991,7 +1990,6 @@
                         <h5>
                             Qinghai University, Xining, China <br>
                             Tsinghua University, Beijing, China <br>
-                            Affiliated Hospital of Qinghai University, Xining, China
                         </h5>
                     </td>
                 </tr>
@@ -2003,7 +2001,7 @@
         <div class="center-table">
             <div class="links" style="margin-top:-10px;">
                 <a href="#" class="btn"><i class="ai ai-arxiv"></i>&nbsp;&nbsp;arXiv</a> &nbsp;
-                <a href="https://github.com/chenjiayan-qhu/EAGLE" class="btn"><svg
+                <a href="https://github.com/chenjiayan-qhu/ELGMamba" class="btn"><svg
                         class="svg-inline--fa fa-github fa-w-16" style="width: 18px; height: 18px;" aria-hidden="true"
                         focusable="false" data-prefix="fab" data-icon="github" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 484 500" data-fa-i2svg="">
@@ -2026,19 +2024,20 @@
         <!-- <div class="figure" style="height: 224px; background-image: url(figures/teaser.png); margin-top: 20px;"></div> -->
         <!-- ？<p class="abstract"> -->
         <p class="abstract">
-            While CNN-based and Transformer-based models have been widely applied to medical image segmentation, 
-            CNNs lack global context modeling due to local receptive fields, and Transformers, 
-            though capable of capturing long-range dependencies, are computationally expensive. 
-            Recently, state space models (SSMs), such as Mamba, have gained attention for their ability to model 
-            long sequences with linear complexity. 
-            In this paper, we propose EAGLE, a U-shaped network that integrates CNNs, Transformers, and SSMs. 
-            We introduce the <strong>Convolutional Vision State Space Block (CVSSB)</strong> to fuse local and global features 
-            and employ the <strong>Haar Wavelet Transformation Block (HWTB)</strong> for lossless downsampling. 
-            EAGLE leverages the synergy between the proposed <strong>Progressive Visual State Space (PVSS) Encoder</strong> 
-            and <strong>Hybrid Visual State Space (HVSS) Decoder</strong> to achieve efficient and accurate segmentation of HE lesions. 
-            Due to the lack of publicly available HE datasets, we collected CT slices from 260 patients at the Affiliated Hospital 
-            of Qinghai University. Experimental results show that EAGLE achieves state-of-the-art performance with a 
-            Dice Similarity Coefficient (DSC) of 89.76%, surpassing MSVM-UNet by 1.61%.
+
+            Hepatic echinococcosis (HE) is a parasitic disease prevalent in remote pastoral regions with limited medical infrastructure.
+            While CNN- and Transformer-based models have advanced medical image segmentation, they suffer from limitations: 
+            CNNs lack global context due to local receptive fields, and Transformers, though effective at capturing long-range dependencies, 
+            are computationally demanding. Recently, state space models (SSMs), such as the Mamba architecture, have emerged as
+            efficient alternatives with linear complexity and global receptive fields. We propose ELGMamba, a novel U-shaped 
+            segmentation network that integrates CNNs, Transformers, and SSMs. The model incorporates
+            a <strong> Local-Global Attention Block (LGAB) </strong> to fuse local and global features, and 
+            a <strong>HaarWavelet-based Spatial Fusion Block (HSFB)</strong> for lossless downsampling via Haar wavelets.
+            ELGMamba employs a <strong> Progressive State Space (PS) Encoder</strong> and a <strong> Hybrid State Space (HS) Decoder</strong> 
+            for effective multi-scale representation and lesion localization. To support research on HE, we curated a CT dataset of 260 confirmed cases. 
+            Experiments show ELGMamba achieves a Dice Similarity Coefficient (DSC) of 89.76\%, surpassing MSVM-UNet by 1.61\%.
+
+            
         </p>
 
         <div>
@@ -2047,11 +2046,11 @@
         </div>
 
             <div class="figure"
-            style="height: 500px; background-image: url(./files/eagle-title.png); margin-top: 20px;"></div>
+            style="height: 500px; background-image: url(./files/ELGMamba-title.png); margin-top: 20px;"></div>
             <div class="figure"
-            style="height: 450px; background-image: url(./files/eagle-cvssb-title.png); margin-top: -10px;"></div>
+            style="height: 450px; background-image: url(./files/LGAB-title.png); margin-top: -10px;"></div>
             <div class="figure"
-            style="height: 170px; background-image: url(./files/eagle-HWTB-title.png); margin-top: 0px;"></div>
+            style="height: 170px; background-image: url(./files/HSFB-title.png); margin-top: 0px;"></div>
         <div>
             <h2 style="color: #f1c432;">Experiments and Results</h2>
             <h5>
@@ -2062,7 +2061,7 @@
                 who were clinically diagnosed with hepatic echinococcosis (HE), including 
                 <b><font color="2EA12E"> 130 cases of cystic echinococcosis (CE)  </font></b> and
                 <b><font color="FF8010"> 130 cases of alveolar echinococcosis (AE) </font></b>. 
-                All data were sourced from Qinghai University Affiliated Hospital. Here are some representative samples.
+                 Here are some representative samples.
                 <div class="figure"
                 style="height: 200px; background-image: url(./files/HE_dataset.png); margin-top: 20px;"></div>  
             </p>
@@ -2075,15 +2074,15 @@
             <p class="abstract" style="margin-top: -30px;">
                 Comparison of different methods on the HE dataset. The optimal values are highlighted in
                 bold, while the second-best values are underlined. Specifically, we compared to the CNN-based UNet, 
-                EAGLE achieves a <b><font color="DA6883"> 4.54% improvement in DSC</font></b> . 
-                When compared with the Transformer-based SwinUNet, EAGLE yields a <b><font color="DA6883"> 2.21%  gain in DSC</font></b>. 
-                Additionally, EAGLE outperforms the SSMs-based MSVM-UNet by<b><font color="DA6883"> 1.61% in DSC</font></b>. 
-                Furthermore, EAGLE also achieves the highest scores in both <b><font color="2EA12E">Precision</font></b> and <b><font color="FF8010">Recall</font></b> metrics. 
+                ELGMamba achieves a <b><font color="DA6883"> 4.54% improvement in DSC</font></b> . 
+                When compared with the Transformer-based SwinUNet, ELGMamba yields a <b><font color="DA6883"> 2.21%  gain in DSC</font></b>. 
+                Additionally, ELGMamba outperforms the SSMs-based MSVM-UNet by<b><font color="DA6883"> 1.61% in DSC</font></b>. 
+                Furthermore, ELGMamba also achieves the highest scores in both <b><font color="2EA12E">Precision</font></b> and <b><font color="FF8010">Recall</font></b> metrics. 
             </p>
             <div class="figure"
                 style="height: 278px; background-image: url(./files/ablation1_table.png); margin-top: 30px;"></div>
             <p class="abstract" style="margin-top: -36px;">
-                Ablation study on different CVSSB stacking configurations. 
+                Ablation study on different LGAB stacking configurations. 
                 Configurations marked with CUDA Out of Memory could not be evaluated due to GPU memory limitations.
                 We  <b><font color="2EA12E">focused on enhancing stage 3 </font></b>  while keeping the overall parameter count within a manageable range. 
                 The final configuration,<b><font color="DA6883"> <span style="font-weight: bold; font-style: italic;">L = [2, 2, 4, 2]</span></font></b>, proved to be the optimal setting.
@@ -2102,7 +2101,7 @@
         <div>
             <h2 style="color: #f1c432; margin-top: 20px;">Example</h2>
             <p class="abstract" style="margin-top: 10;">
-                The <b><font color="ed72b2"> following demos </font></b>  illustrate a comparison between EAGLE and other 
+                The <b><font color="ed72b2"> following demos </font></b>  illustrate a comparison between ELGMamba and other 
                 existing segmentation models on our dataset. In the visualization, 
                 true positives (TP) are highlighted in <b><font color='60cf3d'>green</font></b> , false positives (FP) in <b><font color='1526a9'>blue</font></b>, 
                 and false negatives (FN) in <b><font color="ea338f">hotpink</font></b>.
