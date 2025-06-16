@@ -1,0 +1,56 @@
+# Network config
+model:
+  model_name: EAGLE
+  model_config:
+    in_channels: 1
+    out_channels: 1
+    patch_size: 4          
+    c_list: [32,64,128,256,512]
+    layer_num: [2,2,4,2]
+
+# Loss config
+loss:
+  loss_name: BceDiceLoss 
+
+# Training config
+training:
+  # system: BaselineLightningModule   # Base system. If you want to use DeepSupervision, use BaselineDSLightningModule
+  system: BaselineLightningModule
+  gpus:               # for instance, [0,1,2,3] for multi-gpu training
+  parallel: ddp
+  epochs: 100
+  early_stop:
+    monitor: val_loss
+    mode: min
+    patience: 30   
+    verbose: true
+
+# Optim config
+optimizer:
+  optim_name: adamW
+  lr: 0.001
+  weight_decay: 0.
+
+# Sche config
+scheduler:
+  sche_name: ReduceLROnPlateau
+  sche_config:
+    mode: min
+    factor: 0.5
+    patience: 5
+
+
+# Data config
+datamodule:
+  data_name: BaoDataModule2d
+  data_config:
+    train_dir:  /          # ../data/train
+    val_dir:    /  # ../data/val
+    test_dir:  /  # ../data/test
+    batch_size: 4
+    num_workers: 16
+    pin_memory: true
+
+exp:
+  exp_name: EAGLE
+
