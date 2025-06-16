@@ -22,4 +22,3 @@ Hepatic echinococcosis (HE) is a widespread parasitic disease in underdeveloped 
 
 
 
-The code will be uploaded shortly. Please stay tuned as we finalize the preparation.
