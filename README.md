@@ -4,8 +4,9 @@
 </p>
 
 
-
-# EAGLE: An Efficient Global Attention Lesion Segmentation Model for Hepatic Echinococcosis
+<h1 align="center">
+EAGLE: An Efficient Global Attention Lesion Segmentation Model for Hepatic Echinococcosis
+</h1>
 
 
 ## 📜 Abstract
@@ -58,7 +59,7 @@ The following demos illustrate a comparison between EAGLE and other existing seg
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/chenjiayan-qhu/EAGLE.git
+git clone ../EAGLE.git
 cd EAGLE
 conda env create -f eagle.yml
 conda activate eagle
@@ -98,6 +99,16 @@ data/
         ├── 202.png
         └── ...
 ```
+
+### ⚙️ Model config
+Please configure the model and training hyperparameters in 'local/eagle.yml'.
+
+### ✨ Training
+You can run the following command to train the EAGLE:
+```
+python train_baseline.py
+```
+
 ## 📖 Citation
 
 ```bibtex
@@ -105,7 +116,3 @@ data/
 ```
 
 
-
-## 📧 Contact
-
-If you have any questions, please feel free to contact us via `JethronChen@163.com`.
