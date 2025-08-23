@@ -3,11 +3,19 @@
   <img src="files/logo.png" alt="Logo" width="200"/>
 </p>
 
-
+<div align="center">
 <h1 align="center">
 EAGLE: An Efficient Global Attention Lesion Segmentation Model for Hepatic Echinococcosis
 </h1>
 
+<p align="center">
+  <strong>Jiayan Chen<sup>1</sup>, Kai Li<sup>2</sup>, Yulu Zhao<sup>1</sup>, Jianqiang Huang<sup>1</sup>, Zhan Wang<sup>1,*</sup></strong><br>
+    <strong><sup>1</sup>Qinghai University, Xining, China</strong><br>
+    <strong><sup>2</sup>Tsinghua University, Beijing, China</strong><br>
+  
+  <a href="https://arxiv.org/abs/2506.20333">ArXiv</a> | <a href="https://chenjiayan-qhu.github.io/EAGLE/">Demo</a>
+  
+</div>
 
 ## 📜 Abstract
 
